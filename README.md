@@ -5,4 +5,4 @@ Feidao Decimo
 Margareth De Carvalho
 
 Projeto:
-Caderneta digital do coordenador do cuso
+Caderneta digital do coordenador de turno
