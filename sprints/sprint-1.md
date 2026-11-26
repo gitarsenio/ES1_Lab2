@@ -34,5 +34,3 @@
 - - **O que fiz:** Revistei as histórias de utilizador da Sprint 1 e os critérios de aceitação da autenticação.
   - **O que vou fazer:** Preparar a implementação do ecrã de login e do controlo de acesso por perfil de utilizador (#4).
   - **Impedimentos:** Nenhum.
-  - **O que vou fazer:** Preparar a implementação do ecrã de login e do controlo de acesso por perfil de utilizador (#4).
-  - **Impedimentos:** Nenhum.
