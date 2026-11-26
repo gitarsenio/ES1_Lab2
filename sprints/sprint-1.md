@@ -41,7 +41,7 @@
 
 - **Elidio Arsénio:**
   - **O que fiz:** Concluí o registo da Semana 1 (PR #5) e fiz a leitura e análise detalhada do enunciado do Lab #02 e das secções necessárias para o `processo.md` (#1).
-  - **O que vou fazer:** Redigir o ficheiro `processo.md` num ramo próprio, confirmar as permissões do quadro Kanban (`judsonp`) e abrir o Pull Request para revisão amanhã.
+  - **O que vou fazer:** Redigir o ficheiro `processo.md` num ramo próprio, confirmar as permissões do quadro Kanban e abrir o Pull Request para revisão amanhã.
   - **Impedimentos:** Tempo curto até ao fecho da Sprint 1 (amanhã, 27/11), exigindo foco na execução.
 
 - **Feidao Décimo:**
