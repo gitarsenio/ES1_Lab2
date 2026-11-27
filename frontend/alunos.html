@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de consulta demonstrativa dos alunos da Caderneta Digital.">
+  <title>Alunos | Caderneta Digital</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('caderneta-digital-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (_) {
+        // A aplicação continua a funcionar mesmo quando o armazenamento local está indisponível.
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/styles.css"><script src="./js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Caderneta Digital - painel inicial">
+      <span class="brand-mark" aria-hidden="true">CD</span>
+      <span class="brand-name">Caderneta Digital</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Painel</a>
+        <a href="turmas.html">Turmas</a>
+        <a href="alunos.html" aria-current="page">Alunos</a>
+        <a href="ocorrencias.html">Ocorrências</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-toggle
+          aria-label="Activar modo escuro" aria-pressed="false">
+          <span class="theme-icon" data-theme-icon aria-hidden="true">☾</span>
+          <span data-theme-label>Modo escuro</span>
+        </button>
+        <span class="header-label">Área do Coordenador de Turno</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-container">
+    <div class="breadcrumb"><a href="index.html">Painel</a><span aria-hidden="true">/</span><strong>Alunos</strong></div>
+    <section class="page-heading">
+      <div class="page-heading-copy"><p class="eyebrow">Comunidade escolar</p><h1>Alunos</h1><p class="page-description">Consulte os registos ilustrativos dos alunos e identifique rapidamente a turma a que pertencem.</p></div>
+      <span class="demo-note"><span class="demo-dot"></span> Dados demonstrativos</span>
+    </section>
+    <section class="card card-pad" aria-labelledby="student-list-title">
+      <div class="section-head"><div><h2 id="student-list-title">Directório de alunos</h2><p class="section-subtitle">Foram utilizados identificadores genéricos, sem dados pessoais reais.</p></div></div>
+      <div class="toolbar"><label class="search-box"><input type="search" placeholder="Pesquisar por aluno ou número..." aria-label="Pesquisar alunos" data-search-input="students"></label><select class="filter-select" aria-label="Filtrar por turma" data-filter-select="students"><option value="all">Todas as turmas</option><option value="10A">10.ª A</option><option value="10B">10.ª B</option><option value="11A">11.ª A</option><option value="12A">12.ª A</option></select></div>
+      <div class="table-wrap"><table><thead><tr><th>N.º de processo</th><th>Nome do aluno</th><th>Turma</th><th>Ano lectivo</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr data-search-item="students" data-filter-value="10A"><td>CD-1001</td><td class="primary-cell">Aluno 001<span class="secondary-cell">Identificação de demonstração</span></td><td>10.ª A</td><td>2026/2027</td><td><span class="pill pill-green">Activo</span></td></tr>
+          <tr data-search-item="students" data-filter-value="10A"><td>CD-1002</td><td class="primary-cell">Aluno 002<span class="secondary-cell">Identificação de demonstração</span></td><td>10.ª A</td><td>2026/2027</td><td><span class="pill pill-green">Activo</span></td></tr>
+          <tr data-search-item="students" data-filter-value="10B"><td>CD-1003</td><td class="primary-cell">Aluno 003<span class="secondary-cell">Identificação de demonstração</span></td><td>10.ª B</td><td>2026/2027</td><td><span class="pill pill-amber">Por confirmar</span></td></tr>
+          <tr data-search-item="students" data-filter-value="11A"><td>CD-1101</td><td class="primary-cell">Aluno 004<span class="secondary-cell">Identificação de demonstração</span></td><td>11.ª A</td><td>2026/2027</td><td><span class="pill pill-green">Activo</span></td></tr>
+          <tr data-search-item="students" data-filter-value="11A"><td>CD-1102</td><td class="primary-cell">Aluno 005<span class="secondary-cell">Identificação de demonstração</span></td><td>11.ª A</td><td>2026/2027</td><td><span class="pill pill-green">Activo</span></td></tr>
+          <tr data-search-item="students" data-filter-value="12A"><td>CD-1201</td><td class="primary-cell">Aluno 006<span class="secondary-cell">Identificação de demonstração</span></td><td>12.ª A</td><td>2026/2027</td><td><span class="pill pill-red">Inactivo</span></td></tr>
+        </tbody></table></div>
+      <div id="students-empty" class="empty-state">Não foram encontrados alunos para os critérios seleccionados.</div>
+      <div class="page-info"><span>6 registos fictícios</span><span>Pesquisa e filtro executados no navegador</span></div>
+    </section>
+    <p class="notice" style="margin-top:17px">Nota: esta página demonstra apenas a navegação e a apresentação dos dados. Não existe ainda consulta real ao PostgreSQL nem gestão de processos individuais.</p>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Caderneta Digital</strong>· 2026/2027 ·</p>
+    <p style="margin-top:6px">Protótipo de interface com dados demonstrativos — ainda sem operações de registo/edição.</p>
+  </footer>
+</body>
+</html>

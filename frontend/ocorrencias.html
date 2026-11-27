@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página demonstrativa de consulta de ocorrências escolares da Caderneta Digital.">
+  <title>Ocorrências | Caderneta Digital</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('caderneta-digital-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (_) {
+        // A aplicação continua a funcionar mesmo quando o armazenamento local está indisponível.
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/styles.css"><script src="./js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Caderneta Digital - painel inicial">
+      <span class="brand-mark" aria-hidden="true">CD</span>
+      <span class="brand-name">Caderneta Digital</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Painel</a>
+        <a href="turmas.html">Turmas</a>
+        <a href="alunos.html">Alunos</a>
+        <a href="ocorrencias.html" aria-current="page">Ocorrências</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-toggle
+          aria-label="Activar modo escuro" aria-pressed="false">
+          <span class="theme-icon" data-theme-icon aria-hidden="true">☾</span>
+          <span data-theme-label>Modo escuro</span>
+        </button>
+        <span class="header-label">Área do Coordenador de Turno</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-container">
+    <div class="breadcrumb"><a href="index.html">Painel</a><span aria-hidden="true">/</span><strong>Ocorrências</strong></div>
+    <section class="page-heading">
+      <div class="page-heading-copy"><p class="eyebrow">Acompanhamento disciplinar</p><h1>Ocorrências</h1><p class="page-description">Consulte exemplos de ocorrências escolares e o respectivo estado de acompanhamento.</p></div>
+      <span class="demo-note"><span class="demo-dot"></span> Dados demonstrativos</span>
+    </section>
+    <section class="stats-grid" aria-label="Resumo de ocorrências">
+      <article class="stat-card"><p class="stat-label">Total neste mês</p><p class="stat-value">18</p><span class="stat-foot">Valor ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">Em análise</p><p class="stat-value">4</p><span class="stat-foot">Valor ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">Em acompanhamento</p><p class="stat-value">7</p><span class="stat-foot">Valor ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">Concluídas</p><p class="stat-value">7</p><span class="stat-foot">Valor ilustrativo</span></article>
+    </section>
+    <section id="acompanhamento" class="card card-pad" aria-labelledby="occurrence-list-title">
+      <div class="section-head"><div><h2 id="occurrence-list-title">Registo de ocorrências</h2><p class="section-subtitle">Os exemplos não representam acontecimentos reais da instituição.</p></div></div>
+      <div class="toolbar"><label class="search-box"><input type="search" placeholder="Pesquisar ocorrência, aluno ou turma..." aria-label="Pesquisar ocorrências" data-search-input="occurrences"></label><select class="filter-select" aria-label="Filtrar por estado" data-filter-select="occurrences"><option value="all">Todos os estados</option><option value="analysis">Em análise</option><option value="followup">Em acompanhamento</option><option value="closed">Concluída</option></select></div>
+      <div class="table-wrap"><table><thead><tr><th>Referência</th><th>Data</th><th>Descrição</th><th>Aluno(s)</th><th>Turma</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr data-search-item="occurrences" data-filter-value="analysis"><td class="primary-cell">OC-2026-001</td><td>04/11/2026</td><td>Atraso recorrente</td><td>Aluno 001</td><td>10.ª A</td><td><span class="pill pill-amber">Em análise</span></td></tr>
+          <tr data-search-item="occurrences" data-filter-value="followup"><td class="primary-cell">OC-2026-002</td><td>07/11/2026</td><td>Conflito entre colegas</td><td>Aluno 002 e 003</td><td>10.ª A / B</td><td><span class="pill pill-blue">Em acompanhamento</span></td></tr>
+          <tr data-search-item="occurrences" data-filter-value="closed"><td class="primary-cell">OC-2026-003</td><td>10/11/2026</td><td>Ausência não justificada</td><td>Aluno 004</td><td>11.ª A</td><td><span class="pill pill-green">Concluída</span></td></tr>
+          <tr data-search-item="occurrences" data-filter-value="analysis"><td class="primary-cell">OC-2026-004</td><td>14/11/2026</td><td>Incumprimento de orientação</td><td>Aluno 005</td><td>11.ª A</td><td><span class="pill pill-amber">Em análise</span></td></tr>
+          <tr data-search-item="occurrences" data-filter-value="followup"><td class="primary-cell">OC-2026-005</td><td>19/11/2026</td><td>Dano de material escolar</td><td>Aluno 006</td><td>12.ª A</td><td><span class="pill pill-blue">Em acompanhamento</span></td></tr>
+        </tbody></table></div>
+      <div id="occurrences-empty" class="empty-state">Não foram encontradas ocorrências para os critérios seleccionados.</div>
+      <div class="page-info"><span>5 exemplos de registos</span><span>Pesquisa e filtro executados no navegador</span></div>
+    </section>
+    <p class="notice" style="margin-top:17px">Nota: o registo de ocorrências definitivo deverá respeitar os requisitos do enunciado, incluindo a possibilidade de associar vários alunos à mesma ocorrência. Essa lógica e a persistência dos dados ainda não estão implementadas.</p>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Caderneta Digital</strong>· 2026/2027 ·</p>
+    <p style="margin-top:6px">Protótipo de interface com dados demonstrativos — ainda sem operações de registo/edição.</p>
+  </footer>
+</body>
+</html>
