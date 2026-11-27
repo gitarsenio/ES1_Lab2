@@ -131,7 +131,7 @@ Para reduzir este risco, o grupo compromete-se a:
 * Avaliar explicitamente a evolução deste desafio em todas as Retrospectivas.
 
 ### Registo de acompanhamento nas retrospectivas
-* **Sprint 1:** *(A actualizar na Retrospectiva de 27/11/2026).*
+* **Sprint 1 (27/11/2026):** Confirmámos o desafio da falta de experiência com o método — houve inicialmente dúvidas na configuração do quadro Kanban (campo de iteração e vistas) e no fluxo de ramos, Pull Requests e revisões no GitHub, o que concentrou várias integrações no último dia da sprint. Para a Sprint 2, decidimos abrir os Pull Requests até ao 2.º dia da sprint, actualizar os cartões imediatamente após cada reunião diária e manter apoio rápido via WhatsApp para evitar bloqueios de última hora.
 
 *Fonte consultada: AHMAD, M. O.; MARKKULA, J.; OIVO, M. «Kanban in software development: A systematic literature review». In: 39th Euromicro Conference on Software Engineering and Advanced Applications (SEAA). IEEE, 2013.*
 
@@ -217,3 +217,5 @@ As **medidas de fluxo do Kanban apoiam directamente os eventos do Scrum**:
 4. **Transparência e registo:** Todas as utilizações da IA (ferramenta, finalidade e parte do trabalho apoiada) são documentadas para constarem na declaração obrigatória do relatório final.
 
 *Fonte consultada: SCHWABER, K.; SUTHERLAND, J. The Scrum Guide (2020), secções «Scrum Team» e «Scrum Events», disponível em `scrumguides.org`.*
+
+
