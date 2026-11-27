@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de consulta demonstrativa das turmas da Caderneta Digital.">
+  <title>Turmas | Caderneta Digital</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('caderneta-digital-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (_) {
+        // A aplicação continua a funcionar mesmo quando o armazenamento local está indisponível.
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/styles.css"><script src="./js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Caderneta Digital - painel inicial">
+      <span class="brand-mark" aria-hidden="true">CD</span>
+      <span class="brand-name">Caderneta Digital</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Painel</a>
+        <a href="turmas.html" aria-current="page">Turmas</a>
+        <a href="alunos.html">Alunos</a>
+        <a href="ocorrencias.html">Ocorrências</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-toggle
+          aria-label="Activar modo escuro" aria-pressed="false">
+          <span class="theme-icon" data-theme-icon aria-hidden="true">☾</span>
+          <span data-theme-label>Modo escuro</span>
+        </button>
+        <span class="header-label">Área do Coordenador de Turno</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-container">
+    <div class="breadcrumb"><a href="index.html">Painel</a><span aria-hidden="true">/</span><strong>Turmas</strong></div>
+    <section class="page-heading">
+      <div class="page-heading-copy"><p class="eyebrow">Organização escolar</p><h1>Turmas</h1><p class="page-description">Consulte a distribuição demonstrativa das turmas, os respectivos anos e os directores de turma.</p></div>
+      <span class="demo-note"><span class="demo-dot"></span> Dados demonstrativos</span>
+    </section>
+    <section class="stats-grid" aria-label="Resumo das turmas">
+      <article class="stat-card"><p class="stat-label">Total de turmas</p><p class="stat-value">12</p><span class="stat-foot">Registo ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">1.º ciclo</p><p class="stat-value">6</p><span class="stat-foot">Registo ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">2.º ciclo</p><p class="stat-value">6</p><span class="stat-foot">Registo ilustrativo</span></article>
+      <article class="stat-card"><p class="stat-label">Turno</p><p class="stat-value" style="font-size:22px">Manhã</p><span class="stat-foot">Exemplo de filtro</span></article>
+    </section>
+    <section class="card card-pad" aria-labelledby="class-list-title">
+      <div class="section-head"><div><h2 id="class-list-title">Lista de turmas</h2><p class="section-subtitle">Os registos abaixo são fictícios e servem apenas para demonstrar a interface.</p></div></div>
+      <div class="toolbar"><label class="search-box"><input type="search" placeholder="Pesquisar turma ou director..." aria-label="Pesquisar turma ou director" data-search-input="classes"></label><select class="filter-select" aria-label="Filtrar por turno" data-filter-select="classes"><option value="all">Todos os turnos</option><option value="Manhã">Manhã</option><option value="Tarde">Tarde</option></select></div>
+      <div class="table-wrap"><table><thead><tr><th>Turma</th><th>Ano</th><th>Turno</th><th>Director de turma</th><th>N.º de alunos</th><th>Estado</th></tr></thead>
+        <tbody id="classes-table">
+          <tr data-search-item="classes" data-filter-value="Manhã"><td class="primary-cell">10.ª A</td><td>10.ª classe</td><td>Manhã</td><td>Professor A</td><td>32</td><td><span class="pill pill-green">Activa</span></td></tr>
+          <tr data-search-item="classes" data-filter-value="Tarde"><td class="primary-cell">10.ª B</td><td>10.ª classe</td><td>Tarde</td><td>Professor B</td><td>30</td><td><span class="pill pill-green">Activa</span></td></tr>
+          <tr data-search-item="classes" data-filter-value="Manhã"><td class="primary-cell">11.ª A</td><td>11.ª classe</td><td>Manhã</td><td>Professor C</td><td>29</td><td><span class="pill pill-green">Activa</span></td></tr>
+          <tr data-search-item="classes" data-filter-value="Tarde"><td class="primary-cell">11.ª B</td><td>11.ª classe</td><td>Tarde</td><td>Professor D</td><td>31</td><td><span class="pill pill-green">Activa</span></td></tr>
+          <tr data-search-item="classes" data-filter-value="Manhã"><td class="primary-cell">12.ª A</td><td>12.ª classe</td><td>Manhã</td><td>Professor E</td><td>28</td><td><span class="pill pill-green">Activa</span></td></tr>
+          <tr data-search-item="classes" data-filter-value="Tarde"><td class="primary-cell">12.ª B</td><td>12.ª classe</td><td>Tarde</td><td>Professor F</td><td>27</td><td><span class="pill pill-green">Activa</span></td></tr>
+        </tbody></table></div>
+      <div id="classes-empty" class="empty-state">Não foram encontradas turmas para os critérios seleccionados.</div>
+      <div class="page-info"><span>6 registos de demonstração apresentados</span><span>Pesquisa e filtro executados no navegador</span></div>
+    </section>
+    <p class="notice" style="margin-top:17px">Nota: nesta entrega, a lista é estática. A criação, edição, eliminação e ligação às tabelas PostgreSQL serão definidas e implementadas nas tarefas funcionais da equipa.</p>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Caderneta Digital</strong>· 2026/2027 ·</p>
+    <p style="margin-top:6px">Protótipo de interface com dados demonstrativos — ainda sem operações de registo/edição.</p>
+  </footer>
+</body>
+</html>
