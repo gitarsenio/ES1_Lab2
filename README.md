@@ -1,4 +1,22 @@
-# Caderneta do Coordenador de Turno — Login
+# Caderneta Digital do Coordenador de Turno
+
+**Disciplina:** Engenharia de Software I (Lab #02 — ISPTEC)  
+**Turma:** M3  
+
+## Membros do Grupo
+* Elidio Arsénio (Scrum Master / Developer)
+* Feidao Décimo (Product Owner / Developer)
+* Azael Emídio (Developer)
+* Margareth De Carvalho (Developer)
+
+## Links do Projecto
+* **Repositório:** https://github.com/gitarsenio/ES1_Lab2
+* **Quadro Kanban (`caderneta`):** https://github.com/users/gitarsenio/projects/
+* **Acordo de Processo:** [processo.md](./processo.md)
+* **Requisitos e Casos de Uso:** [docs/](./docs/)
+* **Registo da Sprint 1:** [sprints/sprint-1.md](./sprints/sprint-1.md)
+
+---# Caderneta do Coordenador de Turno — Login
 
 Tela de login desenvolvida com React, TypeScript, JavaScript, Tailwind CSS, Node.js e Express.
 
