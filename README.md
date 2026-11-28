@@ -1,5 +1,25 @@
 # Caderneta Digital do Coordenador de Turno
 
+
+
+**Disciplina:** Engenharia de Software I (Lab #02 — ISPTEC)  
+**Turma:** M3  
+
+## Membros do Grupo
+* Elidio Arsénio (Scrum Master / Developer)
+* Feidao Décimo (Product Owner / Developer)
+* Azael Emídio (Developer)
+* Margareth De Carvalho (Developer)
+
+## Links do Projecto
+* **Repositório:** https://github.com/gitarsenio/ES1_Lab2
+* **Quadro Kanban (`caderneta`):** https://github.com/users/gitarsenio/projects/
+* **Acordo de Processo:** [processo.md](./processo.md)
+* **Requisitos e Casos de Uso:** [docs/](./docs/)
+* **Registo da Sprint 1:** [sprints/sprint-1.md](./sprints/sprint-1.md)
+
+
+
 Aplicação web para apoiar o coordenador de turno na gestão e no acompanhamento de alunos, turmas e ocorrências escolares.
 
 > **Estado desta entrega:** estrutura inicial de desenvolvimento preparada por Azael Emídio para revisão da equipa. Esta versão ainda não implementa os módulos funcionais do produto.
