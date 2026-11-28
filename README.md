@@ -32,9 +32,9 @@ Aplicação web para apoiar o coordenador de turno na gestão e no acompanhament
 | Curso | Licenciatura em Engenharia Informática |
 | Unidade curricular | Engenharia de Software I |
 | Ano lectivo | 2026/2027 |
-| Turma / grupo | **[3]** |
+| Turma / grupo | **3** |
 | Docente | Judson Paiva |
-| Responsável por esta estrutura inicial | Azael Emídio |
+| Responsável por esta estrutura inicial | Azael Emídio e Margareth De Carvalho|
 
 ### Membros identificados no registo da Sprint 1
 
