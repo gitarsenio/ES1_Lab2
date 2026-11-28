@@ -32,7 +32,7 @@ Aplicação web para apoiar o coordenador de turno na gestão e no acompanhament
 | Curso | Licenciatura em Engenharia Informática |
 | Unidade curricular | Engenharia de Software I |
 | Ano lectivo | 2026/2027 |
-| Turma / grupo | **[Preencher com a identificação confirmada pela equipa]** |
+| Turma / grupo | **[3]** |
 | Docente | Judson Paiva |
 | Responsável por esta estrutura inicial | Azael Emídio |
 
@@ -48,7 +48,7 @@ Confirmar com a equipa a grafia final dos nomes antes da integração no reposit
 ## Links do projecto
 
 - [Repositório GitHub](https://github.com/gitarsenio/ES1_Lab2/tree/main)
-- Quadro GitHub Projects / Kanban: **[Inserir o link do quadro da equipa]**
+- Quadro GitHub Projects / Kanban: **[https://github.com/users/gitarsenio/projects/9]**
 
 ## Tecnologias
 
