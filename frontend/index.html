@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel inicial da Caderneta Digital do Coordenador de Turno.">
+  <title>Painel | Caderneta Digital</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('caderneta-digital-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (_) {
+        // A aplicação continua a funcionar mesmo quando o armazenamento local está indisponível.
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Caderneta Digital - painel inicial">
+      <span class="brand-mark" aria-hidden="true">CD</span>
+      <span class="brand-name">Caderneta Digital</span>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Painel</a>
+        <a href="turmas.html">Turmas</a>
+        <a href="alunos.html">Alunos</a>
+        <a href="ocorrencias.html">Ocorrências</a>
+      </nav>
+      <div class="header-tools">
+        <span class="header-label">Área do Coordenador de Turno</span>
+        <button class="theme-toggle" type="button" data-theme-toggle
+          aria-label="Activar modo escuro" aria-pressed="false">
+          <span class="theme-icon" data-theme-icon aria-hidden="true">☾</span>
+          <span data-theme-label>Modo escuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="page-container">
+    <div class="breadcrumb"><span>Página inicial</span><span aria-hidden="true">/</span><strong>Painel</strong></div>
+    <section class="page-heading">
+      <div class="page-heading-copy">
+        <p class="eyebrow">ISPTEC · DET</p>
+        <h1>Bom dia, Coordenador.</h1>
+        <p class="page-description">Acompanhe a organização das turmas, os alunos e as ocorrências escolares a partir de um único espaço.</p>
+      </div>
+      <span class="demo-note"><span class="demo-dot"></span> Dados demonstrativos</span>
+    </section>
+
+    <section class="stats-grid" aria-label="Resumo demonstrativo">
+      <article class="stat-card"><p class="stat-label">Turmas acompanhadas</p><p class="stat-value">12</p><span class="stat-foot">Exemplo para apresentação</span></article>
+      <article class="stat-card"><p class="stat-label">Alunos registados</p><p class="stat-value">348</p><span class="stat-foot">Exemplo para apresentação</span></article>
+      <article class="stat-card"><p class="stat-label">Ocorrências este mês</p><p class="stat-value">18</p><span class="stat-foot">Exemplo para apresentação</span></article>
+      <article class="stat-card"><p class="stat-label">Por acompanhar</p><p class="stat-value">4</p><span class="stat-foot">Exemplo para apresentação</span></article>
+    </section>
+
+    <div class="dashboard-grid">
+      <section class="card card-pad" aria-labelledby="modules-title">
+        <div class="section-head"><div><h2 id="modules-title">Acesso rápido</h2><p class="section-subtitle">Navegue pelos principais espaços da caderneta.</p></div></div>
+        <div class="module-grid">
+          <a class="module-link" href="turmas.html"><span class="module-icon" aria-hidden="true">T</span><span><h3>Turmas</h3><p>Consulte a organização das turmas e os respectivos directores.</p></span></a>
+          <a class="module-link" href="alunos.html"><span class="module-icon" aria-hidden="true">A</span><span><h3>Alunos</h3><p>Visualize a lista demonstrativa de alunos e as suas turmas.</p></span></a>
+          <a class="module-link" href="ocorrencias.html"><span class="module-icon" aria-hidden="true">O</span><span><h3>Ocorrências</h3><p>Consulte os registos e o estado de acompanhamento.</p></span></a>
+          <a class="module-link" href="ocorrencias.html#acompanhamento"><span class="module-icon" aria-hidden="true">H</span><span><h3>Acompanhamento</h3><p>Veja os exemplos de ocorrências pendentes de acompanhamento.</p></span></a>
+        </div>
+      </section>
+
+      <aside class="status-card" aria-labelledby="status-title">
+        <div class="status-heading"><div><p class="eyebrow">Ambiente de desenvolvimento</p><h2 id="status-title">Estado dos serviços</h2></div></div>
+        <dl class="status-list" aria-live="polite">
+          <div class="status-item"><dt>API / servidor</dt><dd id="api-status" class="status-pending">A verificar...</dd></div>
+          <div class="status-item"><dt>PostgreSQL</dt><dd id="database-status" class="status-pending">A verificar...</dd></div>
+        </dl>
+        <button id="refresh-status" class="refresh-button" type="button">Verificar novamente</button>
+        <p id="status-message" class="status-message" role="status" style="margin-top:12px">A verificar a disponibilidade dos serviços.</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Caderneta Digital</strong>· 2026/2027 ·</p>
+    <p style="margin-top:6px">Protótipo de interface com dados demonstrativos — ainda sem operações de registo/edição.</p>
+  </footer>
+</body>
+</html>

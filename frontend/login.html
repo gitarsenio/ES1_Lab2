@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b35">
+  <meta name="description" content="Iniciar sessão na Caderneta Digital do Coordenador de Turno.">
+  <title>Iniciar sessão | Caderneta Digital</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="./js/login.js" defer></script>
+</head>
+<body>
+  <main class="login-layout">
+    <section class="login-hero" aria-label="Apresentação da Caderneta Digital">
+      <div class="hero-glow hero-glow-top" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-bottom" aria-hidden="true"></div>
+
+      <div class="hero-brand">
+        <div class="hero-brand-icon" aria-hidden="true">CD</div>
+        <div>
+          <p class="hero-brand-title">CADERNETA</p>
+          <p class="hero-brand-sub">GESTÃO DE TURNO</p>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Organização e acompanhamento
+        </div>
+        <h1>O seu turno, <span>bem organizado.</span></h1>
+        <p class="hero-description">
+          Aceda à caderneta digital do coordenador e mantenha os registos de turmas,
+          alunos e ocorrências num só lugar.
+        </p>
+
+        <div class="hero-cards">
+          <div class="hero-card">
+            <p class="hero-card-title">Registos centralizados</p>
+            <p class="hero-card-text">Informação organizada e acessível.</p>
+          </div>
+          <div class="hero-card">
+            <p class="hero-card-title">Acesso protegido</p>
+            <p class="hero-card-text">Entrada reservada a utilizadores autorizados.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-footer">© 2026 Caderneta Digital do Coordenador de Turno · ISPTEC</p>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <div class="mobile-brand">
+          <div class="mobile-brand-icon" aria-hidden="true">CD</div>
+          <div>
+            <p class="mobile-brand-title">CADERNETA</p>
+            <p class="mobile-brand-sub">GESTÃO DE TURNO</p>
+          </div>
+        </div>
+
+        <div class="login-header">
+          <p class="login-eyebrow">Bem-vindo de volta</p>
+          <h2>Iniciar sessão</h2>
+          <p>Introduza as suas credenciais para aceder à caderneta.</p>
+        </div>
+
+        <form id="login-form" class="login-form" novalidate>
+          <div class="form-group">
+            <label for="email">E-mail institucional</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="username"
+              placeholder="coordenador@instituicao.ao"
+              class="field"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password">Palavra-passe</label>
+            <div class="password-wrap">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                autocomplete="current-password"
+                placeholder="Insira a sua palavra-passe"
+                class="field field-password"
+              >
+              <button
+                type="button"
+                id="toggle-password"
+                class="toggle-password"
+                aria-label="Mostrar palavra-passe"
+              >
+                Mostrar
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-label">
+              <input id="remember" type="checkbox" checked>
+              Manter sessão iniciada
+            </label>
+            <button type="button" id="forgot-password" class="link-button">
+              Esqueceu-se?
+            </button>
+          </div>
+
+          <button id="submit-button" type="submit" class="submit-button">
+            Entrar na caderneta →
+          </button>
+
+          <p id="login-message" class="login-message" role="status" hidden></p>
+        </form>
+
+        <div class="demo-credentials">
+          <strong>Conta de demonstração:</strong>
+          <code>coordenador@instituicao.ao</code> / <code>123456</code>
+        </div>
+
+        <div class="login-footer">
+          <p>Acesso exclusivo para coordenadores e utilizadores autorizados.</p>
+          <p>Precisa de ajuda? Contacte o suporte técnico.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
